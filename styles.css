@@ -1,0 +1,140 @@
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+}
+
+header .logo h1 {
+    margin: 0;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    padding: 0;
+    margin: 0;
+}
+
+header nav ul li {
+    display: inline;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 5px 10px;
+    transition: background-color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    background-color: #555;
+    border-radius: 5px;
+}
+
+.banner {
+    text-align: center;
+    padding: 50px;
+    background-color: #f4f4f4;
+}
+
+.banner h2 {
+    margin-bottom: 10px;
+}
+
+.banner button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.banner button:hover {
+    background-color: #555;
+}
+
+.content-section {
+    padding: 20px;
+    background-color: #fff;
+}
+
+.content-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.account-listings {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 15px;
+}
+
+.account-card {
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.account-card button {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.account-card button:hover {
+    background-color: #0056b3;
+}
+
+.sell-form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.sell-form input,
+.sell-form textarea {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.sell-form button {
+    padding: 10px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.sell-form button:hover {
+    background-color: #218838;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+}
