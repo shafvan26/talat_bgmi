@@ -51,3 +51,4 @@ def get_accounts():
     db.close()
     return accounts
 
+
