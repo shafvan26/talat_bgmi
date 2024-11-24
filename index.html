@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BGMI & PUBG Account Marketplace - Buy</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Account Marketplace</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="sell.html">Sell</a></li>
+                <li><a href="https://chat.whatsapp.com/LBSS6vxQ0wo2q4DNu9Xx0Q" target="_blank">Join our WhatsApp Group</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Buy Accounts Section -->
+        <section id="buy" class="content-section">
+            <h2>Buy Accounts</h2>
+            <div class="account-listings" id="account-listings">
+                <!-- Dynamic content will be inserted here via JavaScript -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Account Marketplace. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Mock accounts list for illustration
+        const accounts = [
+            {
+                account_name: "ProGamer123",
+                price: 50,
+                account_level: 88,
+                mythic_fashion: 107,
+                conqueror_seasons: "S15, C2S5",
+                weapon_lab: [
+                    { weapon: "M416 Tidal Embrace", level: 7 },
+                    { weapon: "AKM Wandering Tyrant", level: 6 },
+                    { weapon: "M762 Stray Rebellion", level: 4 },
+                    { weapon: "Scar-L Hextech Crystal", level: 4 },
+                    { weapon: "Dp MI Dhamakedar", level: 4 },
+                    { weapon: "Ump 8 Bit Blast", level: 4 }
+                ],
+                xsuit: { name: "Fiore X-Suit", level: 2 },
+                outfits_sets: "Fiore X-Suit, Flamewraith Set",
+                vehicles: "Lamborghini Green, Armored Hunter Mirado",
+                rename_cards: 3,
+                uc_available: 1000,
+                contact_email: "user@example.com"
+            }
+        ];
+
+        // Function to display accounts
+        function displayAccounts() {
+            const accountListings = document.getElementById('account-listings');
+
+            accountListings.innerHTML = accounts.map(account => `
+                <div class="account-card">
+                    <h3>Account Name: ${account.account_name}</h3>
+                    <p>Price: $${account.price}</p>
+                    <p>Account Level: ${account.account_level}</p>
+                    <p>Mythic Fashion: ${account.mythic_fashion}</p>
+                    <p>Conqueror Seasons: ${account.conqueror_seasons}</p>
+
+                    <!-- X-Suit Info -->
+                    <h4>X-Suit: ${account.xsuit.name}</h4>
+                    <p>Level: ${account.xsuit.level}</p>
+
+                    <!-- Weapon Laboratory -->
+                    <h4>Weapon Laboratory:</h4>
+                    <ul>
+                        ${account.weapon_lab.map(weapon => `
+                            <li>${weapon.weapon} - Level ${weapon.level}</li>
+                        `).join('')}
+                    </ul>
+
+                    <!-- Outfits & Sets -->
+                    <p>Outfits & Sets: ${account.outfits_sets}</p>
+
+                    <!-- Vehicles -->
+                    <p>Vehicles: ${account.vehicles}</p>
+
+                    <!-- Miscellaneous Items -->
+                    <p>Rename Cards: ${account.rename_cards}</p>
+                    <p>UC Available: ${account.uc_available}</p>
+                    <p>Contact Email: ${account.contact_email}</p>
+
+                    <button>Buy Now</button>
+                </div>
+            `).join('');
+        }
+
+        // Display accounts initially
+        displayAccounts();
+    </script>
+</body>
+</html>

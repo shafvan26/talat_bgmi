@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sell Your BGMI & PUBG Account</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Account Marketplace - Sell</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="sell.html">Sell</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="https://chat.whatsapp.com/LBSS6vxQ0wo2q4DNu9Xx0Q" target="_blank">Join our WhatsApp Group</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Sell Accounts Form -->
+        <section id="sell" class="content-section">
+            <h2>Sell Your BGMI & PUBG Account</h2>
+            <form class="sell-form" id="sell-form">
+                <!-- Account Details -->
+                <h3>Account Overview</h3>
+                <label for="account-name">Account Name:</label>
+                <input type="text" id="account-name" name="account_name" required>
+
+                <label for="account-level">Account Level:</label>
+                <input type="number" id="account-level" name="account_level" required>
+
+                <label for="mythic-fashion">Mythic Fashion:</label>
+                <input type="number" id="mythic-fashion" name="mythic_fashion" required>
+
+                <label for="conqueror-seasons">Conqueror Seasons (S15, C2S5):</label>
+                <input type="text" id="conqueror-seasons" name="conqueror_seasons" required>
+
+                <label for="voicepack">Mythic Voicepack:</label>
+                <input type="text" id="voicepack" name="voicepack" required>
+
+                <!-- Weapon Laboratory -->
+                <h3>Weapon Laboratory</h3>
+                <textarea id="weapon-lab" name="weapon_lab" rows="4" placeholder="List of Weapons & Levels" required></textarea>
+
+                <!-- Outfits & Sets -->
+                <h3>Outfits & Sets</h3>
+                <textarea id="outfits-sets" name="outfits_sets" rows="4" placeholder="List of Outfits & Sets" required></textarea>
+
+                <!-- Vehicles -->
+                <h3>Vehicles</h3>
+                <textarea id="vehicles" name="vehicles" rows="4" placeholder="List of Vehicles" required></textarea>
+
+                <!-- Miscellaneous Items -->
+                <h3>Miscellaneous</h3>
+                <label for="rename-cards">Rename Cards:</label>
+                <input type="number" id="rename-cards" name="rename_cards" required>
+
+                <label for="uc-available">UC Available:</label>
+                <input type="number" id="uc-available" name="uc_available" required>
+
+                <!-- User Contact Details -->
+                <h3>Your Contact Information</h3>
+                <label for="contact-email">Your Email:</label>
+                <input type="email" id="contact-email" name="contact_email" required>
+
+                <label for="price">Price ($):</label>
+                <input type="number" id="price" name="price" required>
+
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Account Marketplace. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Handle the submission of the form
+        const sellForm = document.getElementById('sell-form');
+
+        sellForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            // Get the form data
+            const accountData = {
+                account_name: document.getElementById('account-name').value,
+                account_level: document.getElementById('account-level').value,
+                mythic_fashion: document.getElementById('mythic-fashion').value,
+                conqueror_seasons: document.getElementById('conqueror-seasons').value,
+                voicepack: document.getElementById('voicepack').value,
+                weapon_lab: document.getElementById('weapon-lab').value,
+                outfits_sets: document.getElementById('outfits-sets').value,
+                vehicles: document.getElementById('vehicles').value,
+                rename_cards: document.getElementById('rename-cards').value,
+                uc_available: document.getElementById('uc-available').value,
+                contact_email: document.getElementById('contact-email').value,
+                price: document.getElementById('price').value
+            };
+
+            // Save the account data or send it to a server (implementation may vary)
+            // For now, we can just alert the user
+            alert('Your account has been listed for sale!');
+            sellForm.reset();  // Reset the form after submission
+        });
+    </script>
+</body>
+</html>
