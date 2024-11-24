@@ -50,4 +50,3 @@ def get_accounts():
     accounts = db.query(Account).all()
     db.close()
     return accounts
-
